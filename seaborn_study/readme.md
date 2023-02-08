@@ -1,6 +1,7 @@
+### Seaborn Tutorial : https://seaborn.pydata.org/tutorial.html
+
 ![image](https://user-images.githubusercontent.com/94737255/217571541-058b8872-ffd6-404a-be18-84805270b98b.png)
 
-
-### Seaborn Tutorial : https://seaborn.pydata.org/tutorial.html
-- 그래프가 나오게끔 jupyter로 작성하려 했지만, 용량차이로 인해 .py파일로 업로드 예정
-
+- 스터디 : 깜냥클럽🐈‍⬛
+- 튜토리얼 페이지 코드 필사
+- ipynb 용량과 py 용량의 차이가 많이 나므로 저장소 절약을 위해 py파일로 업로드
