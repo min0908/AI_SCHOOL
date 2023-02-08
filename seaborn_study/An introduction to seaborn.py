@@ -1,3 +1,5 @@
+# An introduction to seaborn
+
 # import seaborn
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -9,15 +11,14 @@ tips = sns.load_dataset("tips")
 
 tips.info()
 
-# Create a visualization
 # 1) relplot: 산점도와 선그래프 모두 가능----------------
 
-```
+"""
 장점 
 - return값이 FacetGrid(여러개의 Axessubplot을 포함)
 - replot()을 사용하면 색상 값이나 마커코드 측면에서 속성을 지정할 필요X
 
-```
+"""
 
 fig = plt.figure()
 sns.relplot(data= tips,
@@ -29,7 +30,13 @@ sns.relplot(data= tips,
             size = 'size')
 plt.show()
 
-# 2) ------------------------------------------------
+"""
+A high-level API for statistical graphics
+2) ------------------------------------------------
+- 기본값: 산점도
+- kind = 'line' : 선그래프
+"""
+
 dots = sns.load_dataset("dots")
 dots.info()
 fig = plt.figure()
@@ -44,7 +51,10 @@ sns.relplot(data = dots,
             facet_kws= dict(sharex = False))
 plt.show()
 
-# 3) -------------------------------------------------
+"""
+Statistical estimation
+3) -------------------------------------------------
+"""
 fmri = sns.load_dataset('fmri')
 fmri.info()
 fig = plt.figure()
