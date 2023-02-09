@@ -94,6 +94,7 @@ sns.catplot(data=tips, kind="bar",
             x="day", y="total_bill", hue="smoker")
 plt.show()
 
+# Multivariate views on complex datasets
 # 7) jointplot : 다변량 ----------------------------------------
 penguins = sns.load_dataset("penguins")
 sns.jointplot(data=penguins, x="flipper_length_mm",
@@ -103,6 +104,8 @@ plt.show()
 sns.pairplot(data=penguins, hue="species")
 plt.show()
 
+
+# Lower-level tools for building figures
 #8) pairgrid : 대각선을 기준으로 위, 아래에 대해 각각의 시각화도구를 적용
 # corner : 대각선 기준 한쪽은 삭제
 g = sns.PairGrid(penguins, hue="species", corner=True)
@@ -113,6 +116,8 @@ g.add_legend(frameon=True) # 범례
 g.legend.set_bbox_to_anchor((.61, .6)) #범례 위치
 plt.show()
 
+
+# Opinionated defaults and flexible customization
 # 9) ----------------------------------------------------------------
 sns.relplot(
     data=penguins,
