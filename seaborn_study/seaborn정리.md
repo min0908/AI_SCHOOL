@@ -8,7 +8,7 @@ matplotlib 기반으로 만들어진 데이터 시각화 모듈이며 pandas 데
 - scatterplot
 - lineplot
 - relplot
-2. Distribution: 변수 하나 혹은 두개의 값 분포를 나타내기 위한 그래프
+2. Distribution: 변수 하나 혹은 두개의 값 "분포"를 나타내기 위한 그래프
 - histplot
 - kdeplot
 - ecdfplot
