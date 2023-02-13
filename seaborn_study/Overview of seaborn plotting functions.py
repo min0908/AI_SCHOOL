@@ -38,4 +38,4 @@ sns.scatterplot(data=penguins, x="flipper_length_mm",
 sns.histplot(data=penguins, x="species", hue="species",
              shrink=.8, alpha=.8, legend=False, ax=axs[1])
 #f.tight_layout() # 여백과 관련된 레이아웃, 빈칸일땐 기본값
-plt.show()
+plt.show() 
