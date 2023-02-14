@@ -39,7 +39,7 @@ matplotlib 기반의 파이썬 시각화 라이브러리
 *****
 ## 2. figure-level & axes-level
 
-**1. figure-level 함수  **
+**1. figure-level 함수**
 - matplotlib 와 별개로 seaborn 의 figure를 만들어 그곳에 plotting하기  
 - figure-level 함수를 사용하여 seaborn 을 사용한 경우에는 facetgrid(seaborn의 figure)를 통해 레이아웃을 변경할 수 있음  
 - label이 그래프 밖에 위치함
