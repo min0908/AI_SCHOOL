@@ -1,6 +1,7 @@
 # Seaborn 시각화 튜토리얼 정리
 matplotlib 기반의 파이썬 시각화 라이브러리
 **그래프**
+
 ![image](https://user-images.githubusercontent.com/94737255/218521242-eda45bd8-80e4-4b92-9715-aa954ac50cb9.png)
 
 1. relplot: 두가지 변수의 관계를 나타내기 위한 그래프
