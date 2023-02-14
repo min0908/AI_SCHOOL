@@ -83,7 +83,7 @@ sns.displot(data=penguins, x="flipper_length_mm", hue="species", col="species", 
 - axes 수준에 plotting 을 한다는 것인데, figure-level 과는 다르게 matplotlib 의 axes에 그림
 - ax 파라미터를 통해 plotting 할 곳을 지정  
 - plt.figure() 와 같은 메소드로 레이아웃을 변경함
-- label이 그래프 안에 위치함
+- label이 그래프 안에 위치함  
 ex) scatterplot, histplot등 위의 사진에서 하위상자에 해당
 
 
