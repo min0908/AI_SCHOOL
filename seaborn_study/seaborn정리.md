@@ -87,4 +87,24 @@ sns.displot(data=penguins, x="flipper_length_mm", hue="species", col="species", 
 ex) scatterplot, histplot등 위의 사진에서 하위상자에 해당
 
 
+*****
+## 3. Multiple views
+**1. jointplot **
+- 2가지 plot을 한번에 확인해볼 수 있음
+- kind 메소드를 이용하여 plot 종류 선택
+
+```python
+# 안쪽엔 scatter plot이 default
+sns.jointplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
+```
+![image](https://user-images.githubusercontent.com/94737255/218637556-52fce43d-3885-454b-b6a0-8608add25580.png)
+
+
+**2. pairplot**
+- 두 가지 변수 조합을 한번에 확인
+
+```python
+sns.pairplot(data=penguins, hue="species")
+```
+![image](https://user-images.githubusercontent.com/94737255/218637547-91b31d49-2f0d-4b1b-8e8b-c3780ee4db65.png)
 
