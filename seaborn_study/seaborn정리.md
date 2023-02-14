@@ -89,7 +89,7 @@ ex) scatterplot, histplot등 위의 사진에서 하위상자에 해당
 
 *****
 ## 3. Multiple views
-**1. jointplot **
+**1. jointplot**
 - 2가지 plot을 한번에 확인해볼 수 있음
 - kind 메소드를 이용하여 plot 종류 선택
 
