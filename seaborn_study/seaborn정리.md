@@ -108,3 +108,72 @@ sns.pairplot(data=penguins, hue="species")
 ```
 ![image](https://user-images.githubusercontent.com/94737255/218637547-91b31d49-2f0d-4b1b-8e8b-c3780ee4db65.png)
 
+*****
+
+## 4. 그래프별 정리
+
+### 1) 두 가지 변수의 관계 파악
+
+#### scatterplot(산점도)
+`sns.scatterplot(x, y, data)`
+
+- 옵션
+  - hue : 의미에 따라 점의 색깔을 변경
+  - style: 모양 변경
+
+
+```python
+# 아무 설정없는 기본 산점도
+tips = sns.load_dataset("tips")
+sns.scatterplot(x='total_bill', y='tip', data=tips)
+```  
+![image](https://user-images.githubusercontent.com/94737255/218914481-d8089570-c0b6-45ac-a142-706218946724.png)
+
+
+```python
+sns.scatterplot(x='total_bill', y='tip', data=tips, hue='day', style='time')
+```  
+![image](https://user-images.githubusercontent.com/94737255/218914504-b2f905e8-89d3-4d27-aadd-bac035bb0631.png)
+
+
+#### lineplot
+`sns.lineplot(x, y, data)`
+
+- 데이터가 연속형인 경우 주로 사용됨
+- 선 주변 색깔 칠해진 부분: 신뢰구간, `ci` 파라미터로 조절가능
+- 옵션
+  - hue : 의미에 따라 점의 색깔을 변경
+  - style: 모양 변경
+
+```python
+# 아무 설정없는 기본 라인그래프
+fmri = sns.load_dataset("fmri")
+sns.lineplot(x='timepoint', y='signal', data=fmri)
+```  
+![image](https://user-images.githubusercontent.com/94737255/218914521-8dae6ec1-ab61-42db-941c-f6691bc14a6d.png)
+
+
+```python
+sns.lineplot(x='timepoint', y='signal', data=fmri, hue='event', style='event', ci=None)
+```  
+![image](https://user-images.githubusercontent.com/94737255/218914542-bb57cf87-d5f9-4138-ab67-0aef1561a0b7.png)
+
+
+#### relplot
+`sns.relplot(x, y, data)`
+
+- `kind` 파라미터를 통해 scatter / line 형식 변경 가능 (default : scatter)
+- relplot은 앞의 두 그래프와 달리 `FaceGrid`를 반환함 (scatter/line은 `AxeSubplot`을 반환)
+- `FaceGrid`면 여러 그래프를 한번에 그릴 수 있음
+- 옵션
+  - hue : 의미에 따라 점의 색깔을 변경
+  - style: 모양 변경
+ 
+ ```python
+# 아무 설정없는 기본 relplot
+tips = sns.load_dataset("tips")
+sns.relplot(x='total_bill', y='tip', kind='scatter', hue='time', data=tips)
+```  
+![image](https://user-images.githubusercontent.com/94737255/218914553-388b209a-b93a-4a66-bdcd-e0ca3891ec8b.png)
+
+
