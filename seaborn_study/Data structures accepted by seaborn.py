@@ -35,6 +35,43 @@ sns.relplot(data=flights_wide.transpose(), kind="line")
 
 sns.catplot(data=flights_wide, kind="box")
 
+# Messy data
+anagrams = sns.load_dataset("anagrams")
+anagrams_long = anagrams.melt(id_vars=["subidr", "attnr"], var_name="solutions", value_name="score")
+anagrams_long.head()
+
+sns.catplot(data=anagrams_long, x="solutions", y="score", hue="attnr", kind="point")
+
+flights_dict = flights.to_dict()
+sns.relplot(data=flights_dict, x="year", y="passengers", hue="month", kind="line")
+
+flights_avg = flights.groupby("year").mean()
+sns.relplot(data=flights_avg, x="year", y="passengers", kind="line")
+
+flights_avg = flights.groupby("year").mean()
+
+year = flights_avg.index
+passengers = flights_avg["passengers"]
+sns.relplot(x=year, y=passengers, kind="line")
+
+sns.relplot(x=year.to_numpy(), y=passengers.to_list(), kind="line")
+
+
+# Options for visualizeing wide-form data
+flights_wide_list = [col for _, col in flights_wide.items()]
+sns.relplot(data=flights_wide_list, kind="line")
+
+two_series = [flights_wide.loc[:1955, "Jan"], flights_wide.loc[1952:, "Aug"]]
+sns.relplot(data=two_series, kind="line")
+
+two_arrays = [s.to_numpy() for s in two_series]
+sns.relplot(data=two_arrays, kind="line")
+
+two_arrays_dict = {s.name: s.to_numpy() for s in two_series}
+sns.relplot(data=two_arrays_dict, kind="line")
+
+flights_array = flights_wide.to_numpy()
+sns.relplot(data=flights_array, kind="line")
 
 
 
