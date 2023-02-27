@@ -2,7 +2,7 @@
 matplotlib 기반의 파이썬 시각화 라이브러리
 
 # 목차
-1.  [figure-level & axes-level](#2.-figure_level-&-axes_level)
+1.  [figure-level & axes-level](#3.-multiple-views)
 
 
 *****
