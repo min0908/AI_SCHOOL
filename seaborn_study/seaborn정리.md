@@ -177,3 +177,31 @@ sns.relplot(x='total_bill', y='tip', kind='scatter', hue='time', data=tips)
 ![image](https://user-images.githubusercontent.com/94737255/218914553-388b209a-b93a-4a66-bdcd-e0ca3891ec8b.png)
 
 
+### 2) 변수 하나 혹은 두개의 분포를 나타내기 위한 그래프(Distribution)
+#### histplot(히스토그램)  
+`sns.histplot(x, data)`
+
+- y축은 데이터의 빈도를 나타냄
+- 옵션
+  - hue : 레이블 구분
+  - multiple: (multiple = 'stack')으로 하면 hue로 분류된 레이블을 중첩되게 설정
+
+- 2차원으로 그리기(y값 설정)  
+`sns.histplot(x, y, data)`
+
+#### kdeplot(커널 밀도 추정 그래프)  
+`sns.kdeplot(x, data)`
+
+- 히스토그램 y축: count(절대량) / kdeplot y축: 비율(상대량)
+- 옵션
+  - hue : 레이블 구분
+  - multiple: (multiple = 'stack')으로 하면 hue로 분류된 레이블을 중첩되게 설정
+
+- 2차원으로 그리기(y값 설정)  
+`sns.histplot(x, y, data)`
+
+- histplot과 kdeplot 함께 사용하기  
+`sns.histplot(x,data,kde=True)`
+
+
+
