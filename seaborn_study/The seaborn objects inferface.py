@@ -39,6 +39,19 @@ so.Plot(penguins, x="species").add(so.Bar(), so.Hist())
 
 so.Plot(penguins, x="flipper_length_mm").add(so.Bars(), so.Hist())
 
-(so.Plot(penguins, x="body_mass_g", y="species", color="sex").add(so.Range(), so.Est(errorbar="sd"), so.Dodge())
-    .add(so.Dot(), so.Agg(), so.Dodge())
+so.Plot(penguins, x="body_mass_g", y="species", color="sex").add(so.Range(), so.Est(errorbar="sd"), so.Dodge()).add(so.Dot(), so.Agg(), so.Dodge())
+
+
+
+# Orienting marks and transforms
+so.Plot(penguins, x="body_mass_g", y="species", color="sex").add(so.Bar(), so.Agg(), so.Dodge())
+
+so.Plot(tips, x="total_bill", y="size", color="time").add(so.Bar(), so.Agg(), so.Dodge(), orient="y")
+
+#Building and displaying the plot
+(so.Plot(tips, x="total_bill", y="tip")
+    .add(so.Dots())
+    .add(so.Line(), so.PolyFit())
 )
+
+so.Plot(tips, x="total_bill", y="tip", color="time").add(so.Dots()).add(so.Line(), so.PolyFit())
