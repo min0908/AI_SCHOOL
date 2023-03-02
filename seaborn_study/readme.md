@@ -6,3 +6,5 @@
 - 튜토리얼 페이지 코드 필사
 - seaborn 정리 md 따로 생성하기
 - ipynb 용량과 py 용량의 차이가 많이 나므로 저장소 절약을 위해 py파일로 업로드
+
+- 정리할 때 많이 참고했던 깃허브 : https://github.com/LJEDD2/Begins_with_a_single_step/blob/main/03_Pandas%26%EC%8B%9C%EA%B0%81%ED%99%94/seaborn.md
