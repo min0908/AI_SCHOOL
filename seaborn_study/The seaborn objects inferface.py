@@ -54,4 +54,4 @@ so.Plot(tips, x="total_bill", y="size", color="time").add(so.Bar(), so.Agg(), so
     .add(so.Line(), so.PolyFit())
 )
 
-so.Plot(tips, x="total_bill", y="tip", color="time").add(so.Dots()).add(so.Line(), so.PolyFit())
+so.Plot(tips, x="total_bill", y="tip", color="time").add(so.Dots()).add(so.Line(), so.PolyFit()) 
