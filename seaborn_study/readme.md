@@ -6,6 +6,7 @@
 - 튜토리얼 페이지 코드 필사
 - seaborn 정리 md 따로 생성하기
 - ipynb 용량과 py 용량의 차이가 많이 나므로 저장소 절약을 위해 py파일로 업로드
+- notion에 새로 정리하기******
 
 - 정리할 때 많이 참고했던 사이트들  
 1. https://hwi-doc.tistory.com/entry/seaborn-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC   
