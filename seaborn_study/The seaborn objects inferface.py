@@ -48,6 +48,8 @@ so.Plot(penguins, x="body_mass_g", y="species", color="sex").add(so.Bar(), so.Ag
 
 so.Plot(tips, x="total_bill", y="size", color="time").add(so.Bar(), so.Agg(), so.Dodge(), orient="y")
 
+
+
 #Building and displaying the plot
 (so.Plot(tips, x="total_bill", y="tip")
     .add(so.Dots())
@@ -55,3 +57,14 @@ so.Plot(tips, x="total_bill", y="size", color="time").add(so.Bar(), so.Agg(), so
 )
 
 so.Plot(tips, x="total_bill", y="tip", color="time").add(so.Dots()).add(so.Line(), so.PolyFit()) 
+
+
+#Layer-specific mappings
+so.Plot(tips, x="total_bill", y="tip"
+       ).add(so.Dots(), color="time"
+            ).add(so.Line(color=".2"), so.PolyFit())
+
+
+so.Plot(tips, x="total_bill", y="tip", color="time"
+       ).add(so.Dots()
+            ).add(so.Line(color=".2"), so.PolyFit(), color=None)
