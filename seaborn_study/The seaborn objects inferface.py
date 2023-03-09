@@ -68,3 +68,32 @@ so.Plot(tips, x="total_bill", y="tip"
 so.Plot(tips, x="total_bill", y="tip", color="time"
        ).add(so.Dots()
             ).add(so.Line(color=".2"), so.PolyFit(), color=None)
+
+
+# Faceting and pairing subplots
+
+so.Plot(penguins, x="flipper_length_mm"
+		).facet("species"
+			).add(so.Bars(), so.Hist())
+
+
+so.Plot(penguins, x="flipper_length_mm"
+		).facet(col="species", row="sex"
+			).add(so.Bars(), so.Hist())
+
+so.Plot(healthexp, x="Year", y="Life_Expectancy"
+		).facet(col="Country", wrap=3
+			).add(so.Line())
+
+so.Plot(healthexp, x="Year", y="Life_Expectancy"
+		).facet("Country", wrap=3
+			).add(so.Line(alpha=.3), group="Country", col=None
+				).add(so.Line(linewidth=3))
+
+so.Plot(penguins, y="body_mass_g", color="species"
+		).pair(x=["bill_length_mm", "bill_depth_mm"]).add(so.Dots())
+
+
+so.Plot(penguins, y="body_mass_g", color="species"
+		).pair(x=["bill_length_mm", "bill_depth_mm"]
+			).facet(row="sex").add(so.Dots())
