@@ -97,3 +97,15 @@ so.Plot(penguins, y="body_mass_g", color="species"
 so.Plot(penguins, y="body_mass_g", color="species"
 		).pair(x=["bill_length_mm", "bill_depth_mm"]
 			).facet(row="sex").add(so.Dots())
+
+
+
+# Integrating with matplotlib
+f = mpl.figure.Figure(figsize=(8, 4))
+sf1, sf2 = f.subfigures(1, 2)
+
+so.Plot(penguins, x="body_mass_g", y="flipper_length_mm"
+       ).add(so.Dots()).on(sf1).plot()
+
+so.Plot(penguins, x="body_mass_g"
+       ).facet(row="sex").add(so.Bars(), so.Hist()).on(sf2).plot()
