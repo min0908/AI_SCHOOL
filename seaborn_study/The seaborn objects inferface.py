@@ -109,3 +109,31 @@ so.Plot(penguins, x="body_mass_g", y="flipper_length_mm"
 
 so.Plot(penguins, x="body_mass_g"
        ).facet(row="sex").add(so.Bars(), so.Hist()).on(sf2).plot()
+
+
+
+# Building and displaying the plot
+
+p = so.Plot(healthexp, "Year", "Spending_USD", color="Country")
+
+p.add(so.Line())
+
+p.add(so.Area(), so.Stack())
+
+# Customizing the appearance
+# Parameterizing scales
+
+so.Plot(diamonds, x="carat", y="price"
+       ).add(so.Dots()).scale(y="log")
+
+so.Plot(diamonds, x="carat", y="price", color="clarity"
+       ).add(so.Dots()).scale(color="flare")
+
+so.Plot(diamonds, x="carat", y="price", color="clarity", pointsize="carat"
+       ).add(so.Dots()).scale(color=("#88c", "#555"), pointsize=(2, 10))
+
+
+so.Plot(diamonds, x="carat", y="price", color="carat", marker="cut"
+       ).add(so.Dots()).scale(
+        color=so.Continuous("crest", norm=(0, 3), trans="sqrt"),
+        marker=so.Nominal(["o", "+", "x"], order=["Ideal", "Premium", "Good"]),)
