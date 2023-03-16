@@ -137,3 +137,50 @@ so.Plot(diamonds, x="carat", y="price", color="carat", marker="cut"
        ).add(so.Dots()).scale(
         color=so.Continuous("crest", norm=(0, 3), trans="sqrt"),
         marker=so.Nominal(["o", "+", "x"], order=["Ideal", "Premium", "Good"]),)
+
+# Customizing legends and ticks
+
+so.Plot(diamonds, x="carat", y="price", color="carat"
+       ).add(so.Dots()).scale(
+        x=so.Continuous().tick(every=0.5),
+        y=so.Continuous().label(like="${x:.0f}"),
+        color=so.Continuous().tick(at=[1, 2, 3, 4]),
+    )
+
+# Customizing limits, labels, and titles
+ so.Plot(penguins, x="body_mass_g", y="species", color="island"
+	).facet(col="sex").add(so.Dot(), so.Jitter(.5)
+			      ).share(x=False).limit(y=(2.5, -.5)
+						    ).label(
+        x="Body mass (g)", y="",
+        color=str.capitalize,
+        title="{} penguins".format,
+    )
+
+
+# Theme customization
+from seaborn import axes_style
+so.Plot().theme({**axes_style("whitegrid"), "grid.linestyle": ":"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
