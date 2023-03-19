@@ -158,7 +158,7 @@ so.Plot(diamonds, x="carat", y="price", color="carat"
     )
 
 
-# Theme customization
+# Theme customization. 
 from seaborn import axes_style
 so.Plot().theme({**axes_style("whitegrid"), "grid.linestyle": ":"})
 
