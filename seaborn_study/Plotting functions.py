@@ -20,7 +20,7 @@ import seaborn as sns
 sns.set_theme(style="darkgrid")
 # %matplotlib inline
 
-# # Relating variables with scatter plots
+# # Relating variables with scatter plots--------------------------------
 
 tips = sns.load_dataset("tips")
 sns.relplot(data=tips, x="total_bill", y="tip")
@@ -45,12 +45,12 @@ sns.relplot(
     data=tips, x="total_bill", y="tip",
     size="size", sizes=(15, 200))
 
-# # Emphasizing continuity with line plots
+# # Emphasizing continuity with line plots------------------------------------
 
 dowjones = sns.load_dataset("dowjones")
 sns.relplot(data=dowjones, x="Date", y="Price", kind="line")
 
-# ## Aggregation and representing uncertainty
+# ## Aggregation and representing uncertainty-------------------------
 
 fmri = sns.load_dataset("fmri")
 sns.relplot(data=fmri, x="timepoint", y="signal", kind="line")
@@ -68,7 +68,7 @@ sns.relplot(
     x="timepoint", y="signal",
     estimator=None)
 
-# ## Plotting subsets of data with semantic mappings
+# ## Plotting subsets of data with semantic mappings-------------------
 
 sns.relplot(
     data=fmri, kind="line",
@@ -123,7 +123,7 @@ sns.relplot(
     x="time", y="firing_rate",
     hue="coherence", size="choice", palette=palette)
 
-# ## Controlling sorting and orientation
+# ## Controlling sorting and orientation-----------------
 
 
 
