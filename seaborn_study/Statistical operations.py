@@ -106,7 +106,7 @@ sns.pairplot(tips, x_vars=["total_bill", "size"], y_vars=["tip"],
              height=5, aspect=.8, kind="reg");
 
 sns.pairplot(tips, x_vars=["total_bill", "size"], y_vars=["tip"],
-             hue="smoker", height=5, aspect=.8, kind="reg");
+             hue="smoker", height=5, aspect=.8, kind="reg"); 
 
 
 
