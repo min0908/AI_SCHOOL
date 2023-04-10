@@ -42,4 +42,4 @@ g = sns.FacetGrid(tips, col="smoker", margin_titles=True, height=4)
 g.map(plt.scatter, "total_bill", "tip", color="#338844", edgecolor="white", s=50, lw=1)
 for ax in g.axes_dict.values():
     ax.axline((0, 0), slope=.2, c=".2", ls="--", zorder=0)
-g.set(xlim=(0, 60), ylim=(0, 14))
+g.set(xlim=(0, 60), ylim=(0, 14)) 
